@@ -3,11 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página Web</title>
+    <title>Blog de Inteligencia Artificial y Analítica de Datos</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .config {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <h1>¡Hola, mundo!</h1>
-    <p>Esta es mi primera página web en GitHub Pages.</p>
+    <header>
+        <h1>Blog de Inteligencia Artificial y Analítica de Datos</h1>
+    </header>
+    <nav>
+        <a href="#ia">Inteligencia Artificial</a>
+        <a href="#analitica">Analítica de Datos</a>
+        <a href="#config">Configuración</a>
+    </nav>
+    <div class="container">
+        <section id="ia" class="article">
+            <h2>Introducción a la Inteligencia Artificial</h2>
+            <p>La inteligencia artificial (IA) es una rama de la informática que se centra en la creación de sistemas capaces de realizar tareas que normalmente requieren inteligencia humana, como el reconocimiento de voz, el aprendizaje, la planificación y la resolución de problemas.</p>
+            <img src="https://via.placeholder.com/800x400" alt="Gráfica sobre IA">
+        </section>
+        <section id="analitica" class="article">
+            <h2>Analítica de Datos</h2>
+            <p>La analítica de datos es el proceso de inspeccionar, limpiar y modelar datos con el objetivo de descubrir información útil, llegar a conclusiones y apoyar la toma de decisiones.</p>
+            <img src="https://via.placeholder.com/800x400" alt="Gráfica sobre Analítica de Datos">
+        </section>
+        <section id="config" class="config">
+            <h2>Configuración de estilo</h2>
+            <label for="primary-color">Color principal:</label>
+            <input type="color" id="primary-color" name="primary-color" value="#333333">
+            
+            <label for="secondary-color">Color secundario:</label>
+            <input type="color" id="secondary-color" name="secondary-color" value="#666666">
+            
+            <label for="font-family">Fuente:</label>
+            <select id="font-family" name="font-family">
+                <option value="'Arial', sans-serif">Arial</option>
+                <option value="'Times New Roman', serif">Times New Roman</option>
+                <option value="'Courier New', monospace">Courier New</option>
+            </select>
+            
+            <button onclick="applyStyles()">Aplicar</button>
+        </section>
+    </div>
+    <script>
+        function applyStyles() {
+            const primaryColor = document.getElementById('primary-color').value;
+            const secondaryColor = document.getElementById('secondary-color').value;
+            const fontFamily = document.getElementById('font-family').value;
+
+            document.documentElement.style.setProperty('--primary-color', primaryColor);
+            document.documentElement.style.setProperty('--secondary-color', secondaryColor);
+            document.documentElement.style.setProperty('--font-family', fontFamily);
+        }
+    </script>
 </body>
 </html>
