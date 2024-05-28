@@ -1,15 +1,48 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    text-align: center;
-    margin: 0;
-    padding: 20px;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .config {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>¡Hola, mundo!</h1>
+    <p>Esta es mi primera página web en GitHub Pages.</p>
 
-h1 {
-    color: #666;
-}
+    <div class="config">
+        <h2>Configuración de estilo</h2>
+        <label for="primary-color">Color principal:</label>
+        <input type="color" id="primary-color" name="primary-color" value="#333333">
+        
+        <label for="secondary-color">Color secundario:</label>
+        <input type="color" id="secondary-color" name="secondary-color" value="#666666">
+        
+        <label for="font-family">Fuente:</label>
+        <select id="font-family" name="font-family">
+            <option value="'Arial', sans-serif">Arial</option>
+            <option value="'Times New Roman', serif">Times New Roman</option>
+            <option value="'Courier New', monospace">Courier New</option>
+        </select>
+        
+        <button onclick="applyStyles()">Aplicar</button>
+    </div>
 
-p {
-    color: #666;
-}
+    <script>
+        function applyStyles() {
+            const primaryColor = document.getElementById('primary-color').value;
+            const secondaryColor = document.getElementById('secondary-color').value;
+            const fontFamily = document.getElementById('font-family').value;
+
+            document.documentElement.style.setProperty('--primary-color', primaryColor);
+            document.documentElement.style.setProperty('--secondary-color', secondaryColor);
+            document.documentElement.style.setProperty('--font-family', fontFamily);
+        }
+    </script>
+</body>
+</html>
