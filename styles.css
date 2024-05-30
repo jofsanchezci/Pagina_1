@@ -1,59 +1,71 @@
-:root {
-    --primary-color: #333;
-    --secondary-color: #666;
-    --font-family: 'Arial', sans-serif;
-}
-
 body {
-    font-family: var(--font-family);
-    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: var(--primary-color);
+    background-color: #f9f9f9;
+    color: #333;
 }
 
 header {
     background-color: #4CAF50;
     color: white;
-    padding: 15px 10px;
     text-align: center;
+    padding: 1em 0;
 }
 
 nav {
+    background-color: #333;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
-    background-color: #333;
+}
+
+nav li {
+    margin: 0 1em;
 }
 
 nav a {
     color: white;
-    padding: 14px 20px;
     text-decoration: none;
-    text-align: center;
+    padding: 0.5em;
+    display: block;
 }
 
 nav a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: #575757;
 }
 
-.container {
-    padding: 20px;
-}
-
-.article {
+main {
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 1em;
     background-color: white;
-    padding: 20px;
-    margin-bottom: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.article img {
+section {
+    margin-bottom: 2em;
+}
+
+section img {
     max-width: 100%;
     border-radius: 8px;
 }
 
-.config {
-    margin-top: 20px;
+#plot {
+    width: 100%;
+    height: 500px;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #4CAF50;
+    color: white;
 }

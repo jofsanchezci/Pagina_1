@@ -3,63 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog de Inteligencia Artificial y Analítica de Datos. Hola Mundo</title>
+    <title>Semillero DS_TOOLS</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .config {
-            margin-top: 20px;
-            text-align: center;
-        }
-    </style>
 </head>
 <body>
     <header>
-        <h1>Blog de Inteligencia Artificial y Analítica de Datos</h1>
+        <h1>Semillero DS_TOOLS</h1>
     </header>
     <nav>
-        <a href="#ia">Inteligencia Artificial</a>
-        <a href="#analitica">Analítica de Datos</a>
-        <a href="#config">Configuración</a>
+        <ul>
+            <li><a href="#informacion">Información del Semillero</a></li>
+            <li><a href="#teoria">Ciencia de Datos y Programación Funcional</a></li>
+            <li><a href="#actividades">Actividades</a></li>
+        </ul>
     </nav>
-    <div class="container">
-        <section id="ia" class="article">
-            <h2>Introducción a la Inteligencia Artificial</h2>
-            <p>La inteligencia artificial (IA) es una rama de la informática que se centra en la creación de sistemas capaces de realizar tareas que normalmente requieren inteligencia humana, como el reconocimiento de voz, el aprendizaje, la planificación y la resolución de problemas.</p>
-            <img src="ai_image.png" alt="Gráfica sobre IA">
+    <main>
+        <section id="informacion">
+            <h2>Información del Semillero</h2>
+            <p>El semillero DS_TOOLS se dedica a la investigación y desarrollo en el área de ciencia de datos y programación funcional. Nuestro objetivo es formar a los estudiantes en técnicas avanzadas y prácticas innovadoras en estos campos.</p>
         </section>
-        <section id="analitica" class="article">
-            <h2>Analítica de Datos</h2>
-            <p>La analítica de datos es el proceso de inspeccionar, limpiar y modelar datos con el objetivo de descubrir información útil, llegar a conclusiones y apoyar la toma de decisiones.</p>
-            <img src="https://via.placeholder.com/800x400" alt="Gráfica sobre Analítica de Datos">
+        <section id="teoria">
+            <h2>Ciencia de Datos y Programación Funcional</h2>
+            <p>La ciencia de datos es un campo interdisciplinario que utiliza métodos, procesos, algoritmos y sistemas para extraer conocimiento y perspectivas de datos en diversas formas. La programación funcional es un paradigma de programación que trata la computación como la evaluación de funciones matemáticas y evita el estado y los datos mutables.</p>
         </section>
-        <section id="config" class="config">
-            <h2>Configuración de estilo</h2>
-            <label for="primary-color">Color principal:</label>
-            <input type="color" id="primary-color" name="primary-color" value="#333333">
-            
-            <label for="secondary-color">Color secundario:</label>
-            <input type="color" id="secondary-color" name="secondary-color" value="#666666">
-            
-            <label for="font-family">Fuente:</label>
-            <select id="font-family" name="font-family">
-                <option value="'Arial', sans-serif">Arial</option>
-                <option value="'Times New Roman', serif">Times New Roman</option>
-                <option value="'Courier New', monospace">Courier New</option>
-            </select>
-            
-            <button onclick="applyStyles()">Aplicar</button>
+        <section id="actividades">
+            <h2>Actividades</h2>
+            <h3>Evaluación de Modelos</h3>
+            <p>En esta actividad, los estudiantes aplicarán técnicas de evaluación y validación de modelos predictivos, utilizando métricas de rendimiento y métodos de validación cruzada.</p>
+            <h3>Visualización</h3>
+            <p>Los participantes aprenderán a crear visualizaciones interactivas y efectivas para comunicar sus hallazgos, utilizando herramientas como Plotly y D3.js.</p>
+            <div id="plot"></div>
         </section>
-    </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Semillero DS_TOOLS</p>
+    </footer>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script>
-        function applyStyles() {
-            const primaryColor = document.getElementById('primary-color').value;
-            const secondaryColor = document.getElementById('secondary-color').value;
-            const fontFamily = document.getElementById('font-family').value;
+        document.addEventListener('DOMContentLoaded', function() {
+            var trace1 = {
+                x: [1, 2, 3, 4, 5],
+                y: [10, 15, 13, 17, 22],
+                mode: 'lines+markers',
+                type: 'scatter'
+            };
 
-            document.documentElement.style.setProperty('--primary-color', primaryColor);
-            document.documentElement.style.setProperty('--secondary-color', secondaryColor);
-            document.documentElement.style.setProperty('--font-family', fontFamily);
-        }
+            var data = [trace1];
+
+            var layout = {
+                title: 'Simulación de Modelo',
+                xaxis: {
+                    title: 'X Axis'
+                },
+                yaxis: {
+                    title: 'Y Axis'
+                }
+            };
+
+            Plotly.newPlot('plot', data, layout);
+        });
     </script>
 </body>
 </html>
